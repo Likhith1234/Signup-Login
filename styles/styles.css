@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/background.jfif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    word-wrap: break-word;
+}
+
+h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+form {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-10%);
+    /* background-color: lightblue; */
+}
+
+.msg {
+    display: none;
+    color: rgb(243, 7, 7);
+}
+
+form > div {
+    /* background-color: lightcoral; */
+    margin: .2em;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form > div > label, .btn {
+    font-weight: bolder;
+    font-size: large;
+}
+
+.inputs, .btn {
+    padding: .5em;
+    border: none;
+    outline: none;
+}
+
+.inputs {
+    background: transparent;
+    border-bottom: 1px solid black;
+    font-size: large;
+    width: 100%;
+}
+
+.pass-btn {
+    display: flex;
+}
+
+.pass-btn > input {
+    flex: 1;
+}
+
+.pass-btn > button {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+
+#pass-img {
+    width: 25px;
+    height: 25px;
+}
+
+.pass-btn > button:hover {
+    cursor: pointer;
+}
+
+.btn {
+    background-color: rgb(116, 175, 252);
+    border-radius: .2em;
+}
+
+.btn ~ a{
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+    form > div {
+        width: 70%;
+    }
+
+    body, form > div > label, .inputs {
+        font-size: xx-large;
+    }
+}
+
+@media screen and (max-width:768px) {
+    form > div {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:540px) {
+    form > div {
+        width: 80%;
+    }
+
+    body, form > div > label, .inputs {
+        font-size: large;
+    }
+}

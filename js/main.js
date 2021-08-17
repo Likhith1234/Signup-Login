@@ -8,7 +8,7 @@ const signUpUser = (e) => {
         "email": doc[2].value,
         "passwd": doc[3].value
     };
-    fetch("http://localhost:8000/signup", {
+    fetch("https://signup-login-form-backend.herokuapp.com/signup", {
         method: "post",
         body: JSON.stringify(user),
         headers: {
@@ -30,7 +30,7 @@ const logInUser = (e) => {
         "email": doc[0].value,
         "passwd": doc[1].value
     };
-    fetch("http://localhost:8000/login", {
+    fetch("https://signup-login-form-backend.herokuapp.com/login", {
         method: "post",
         body: JSON.stringify(user),
         headers: {
@@ -50,7 +50,7 @@ const logInUser = (e) => {
 }
 
 const openSuccess = () => {
-    fetch("http://localhost:8000/success", {
+    fetch("https://signup-login-form-backend.herokuapp.com/success", {
         headers: {
             "authorization": "Bearer " + localStorage.getItem("LeeMart Token")
         }
